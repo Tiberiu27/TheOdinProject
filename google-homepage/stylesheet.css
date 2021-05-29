@@ -74,3 +74,64 @@ button:active {
     outline-style: auto;
 }
 
+.nav-button {
+    background-color: transparent;
+}
+
+#google-apps {
+    align-self: center;
+    opacity: 0.5;
+}
+
+#google-apps:hover {
+    cursor: pointer;
+}
+
+#sign-in {
+    background-color: rgb(27, 128, 245);
+    color: white;
+    border-radius: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.first-nav-buttons {
+    flex-direction: row;
+}
+
+.last-nav-buttons {
+    flex-direction: row;
+    margin-left: 71%;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+    background-color: rgb(240, 240, 240);
+}
+
+.footer-button {
+    background-color: transparent;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.first-footer-buttons {
+    flex-direction: row;
+}
+
+.last-footer-buttons {
+    flex-direction: row;
+    margin-left: 60%;
+    background-color: rgb(240, 240, 240);
+}
