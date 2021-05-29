@@ -1,0 +1,76 @@
+img {
+    width: 100%;
+    height: auto;
+}
+
+img {
+    height: 92px;
+    width: 272px;
+    display: flex;
+    padding-top: 109px;
+}
+
+.search-container {
+    display: flex;
+    border-radius: 25px;
+    width: 582px;
+    border: 1px solid #dfe1e5;
+    height: 44px;
+    margin-top: 37px;
+    flex-direction: row;
+}
+
+input {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    line-height: 34px;
+    font-size: 16px;
+    font-family: sans-serif;
+    border-color: transparent;
+}
+
+input:focus {
+    outline: none;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.material-icons-outlined {
+    font-family: 'Material Icons';
+    padding-inline: 10px;
+    font-size: 21px;
+}
+
+#search-icon {
+    opacity: 0.5;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+    justify-content: space-between;
+}
+
+button {
+    margin: 5px;
+    border-width: 0px;
+    border-radius: 5px;
+    padding: 12px;
+    color: rgb(95, 95, 94);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    outline-style: auto;
+}
+
