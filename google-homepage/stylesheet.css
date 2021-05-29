@@ -101,7 +101,12 @@ button:active {
 
 nav {
     display: flex;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .first-nav-buttons {
@@ -110,13 +115,16 @@ nav {
 
 .last-nav-buttons {
     flex-direction: row;
-    margin-left: 71%;
 }
 
 footer {
     display: flex;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
     flex-direction: row;
-    margin-top: 3%;
+    justify-content: space-between;
     background-color: rgb(240, 240, 240);
 }
 
@@ -132,6 +140,5 @@ footer {
 
 .last-footer-buttons {
     flex-direction: row;
-    margin-left: 60%;
     background-color: rgb(240, 240, 240);
 }
