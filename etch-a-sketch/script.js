@@ -37,7 +37,6 @@ function newGrid() {
 
     container.innerHTML = '';
     generateGrid(userInput);
-
 }
 
 const button = document.createElement('button');

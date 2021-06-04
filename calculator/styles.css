@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+#container {
+    margin-top: 5%;
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: burlywood;
+    padding: 10px;
+}
+
+#buttonContainer {
+    display: grid;
+    margin-left: 20px;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+button {
+    background-color: gray;
+    color: whitesmoke;
+    border-radius: 50%;
+    border: none;
+    font-size: 30px;
+    width: 100px;
+    height: 100px;
+}
+
+.action {
+    background-color: orange;
+}
+
+#num0 {
+    border-radius: 500px;
+}
+
+button:active {
+    background-color: lightgray;
+}
+
+#display {
+    word-wrap: break-word;
+    margin-inline: 15px;
+    padding: 7px;
+    height: 100px;
+    width: 500px;
+    font-size: 70px;
+    color: whitesmoke;
+    text-align: end;
+    
+}
