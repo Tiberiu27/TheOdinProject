@@ -100,6 +100,15 @@ function listenToClick(button) {
             return;
         }
 
+        if (operator === '/' && secondNumber === 0) {
+            currentNumber = '';
+            firstNumber = '';
+            secondNumber = '';
+            operator = '';
+            display.textContent = '';
+            return;
+        }
+
         currentNumber = '';
         let result = Number.parseFloat(operate(`${operator}`, firstNumber, secondNumber))
         display.textContent = Math.round(result * 100) / 100;
