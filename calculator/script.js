@@ -93,8 +93,13 @@ function listenToClick(button) {
             operator = '';
             display.textContent = '';
         }
+        if (currentNumber) {
+            secondNumber = Number.parseFloat(currentNumber);
+        } else {
+            operator = button.id;
+            return;
+        }
 
-        secondNumber = Number.parseFloat(currentNumber);
         currentNumber = '';
         display.textContent = operate(`${operator}`, firstNumber, secondNumber);
         secondNumber = '';
