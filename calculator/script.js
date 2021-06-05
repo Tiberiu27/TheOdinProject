@@ -36,11 +36,13 @@ function operate(operator, first, second) {
 
 //GUI
 const container = document.querySelector('#container');
+
 //generating display...
 const display = document.createElement('p');
 display.setAttribute("id", "display");
 display.setAttribute("maxlength", 20);
 container.appendChild(display);
+
 //Generating buttons...
 const buttonContainer = document.createElement('div');
 buttonContainer.setAttribute("id", "buttonContainer");
@@ -65,6 +67,13 @@ for (let i = 0; i < buttonsArray.length; i++) {
 
 container.appendChild(buttonContainer);
 
+//generating errorMessage place...
+const body = document.querySelector('body');
+const errorMessage = document.createElement('p');
+errorMessage.setAttribute("id", "errorMessage");
+errorMessage.textContent = "";
+body.appendChild(errorMessage);
+
 //wiring up js with gui
 let currentNumber = '';
 let operator = ''
@@ -76,8 +85,15 @@ function listenToClick(button) {
     }
     
     if (button.className === 'digit' && !firstNumber) {
+        if (errorMessage) {
+            errorMessage.textContent = '';
+        }
         currentNumber += button.textContent;
         display.textContent = currentNumber;
+
+        while(display.textContent.charAt(0) === '0') {
+            display.textContent = display.textContent.substring(1);
+        }
     } else if (button.className === 'action' && display.textContent && !firstNumber) {
         firstNumber = Number.parseFloat(currentNumber);
         operator = button.id;
@@ -85,6 +101,10 @@ function listenToClick(button) {
     } else if (button.className === 'digit' && firstNumber) {
         currentNumber += button.textContent;
         display.textContent = currentNumber;
+
+        while(display.textContent.charAt(0) === '0') {
+            display.textContent = display.textContent.substring(1);
+        }
     } else if (button.className === 'action' && firstNumber) {
         if (button.id === 'clear') {
             currentNumber = '';
@@ -101,6 +121,7 @@ function listenToClick(button) {
         }
 
         if (operator === '/' && secondNumber === 0) {
+            errorMessage.textContent = "You can't divide by 0"
             currentNumber = '';
             firstNumber = '';
             secondNumber = '';

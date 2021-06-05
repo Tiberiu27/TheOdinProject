@@ -52,5 +52,10 @@ button:active {
     font-size: 70px;
     color: whitesmoke;
     text-align: end;
-    
+}
+
+#errorMessage {
+    position: absolute;
+    color: whitesmoke;
+   
 }
