@@ -28,7 +28,7 @@ button {
     font-size: 30px;
     width: 100px;
     height: 100px;
-    text-align: center;
+    padding: 0px;
 }
 
 .action {
