@@ -101,7 +101,8 @@ function listenToClick(button) {
         }
 
         currentNumber = '';
-        display.textContent = operate(`${operator}`, firstNumber, secondNumber);
+        let result = Number.parseFloat(operate(`${operator}`, firstNumber, secondNumber))
+        display.textContent = Math.round(result * 100) / 100;
         secondNumber = '';
         firstNumber = Number.parseFloat(display.textContent);
         operator = button.id;
