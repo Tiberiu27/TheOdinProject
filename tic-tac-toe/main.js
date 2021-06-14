@@ -75,8 +75,8 @@ const GameBoard = ((doc) => {
         board[index].markedWith = marker;
     }
 
-    const arrayEquals = (a, b) => {
-        if (a.length === b.length && a.every((val, index) => val === b[index])) {
+    const lineCheck = (arr, target) => {
+        if (target.every(item => arr.includes(item))) {
             return true;
         }
     }
@@ -96,10 +96,10 @@ const GameBoard = ((doc) => {
         let oMarkedSpaces = board.filter(square => square.markedWith === 'O');
 
         winningLines.forEach(function(line) {
-            if (arrayEquals(xMarkedSpaces.map(space => space.name), line)) {
+            if (lineCheck(xMarkedSpaces.map(space => space.name), line)) {
                 mainContainer.style.pointerEvents = 'none';
                 DisplayController.turnElement.textContent = `${playerOne.name} has won! Congrats!`; 
-            } else if (arrayEquals(oMarkedSpaces.map(space => space.name), line)) {
+            } else if (lineCheck(oMarkedSpaces.map(space => space.name), line)) {
                 mainContainer.style.pointerEvents = 'none';
                 DisplayController.turnElement.textContent = `${playerTwo.name} has won! Congrats!`;
             } 
