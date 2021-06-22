@@ -1,0 +1,69 @@
+body {
+    background-image: url(../assets/pizza-background.jpg);
+    background-color: rgb(10, 10, 10);
+    background-repeat: no-repeat;
+}
+
+#content {
+    margin-top: 50px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+
+p {
+    color: white;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%;
+    top: 10px;
+}
+
+li {
+}
+
+span {
+    color: white;
+    font-size: 20px;
+    margin-inline: 20px;
+}
+
+span:hover {
+    cursor: pointer;
+    color: rgb(137, 167, 82)
+}
+
+h3, h4 {
+    color: white;
+    text-align: center;
+}
+
+.pizzas {
+    text-align: center;
+}
+
+.pizzas:hover {
+    background-color: rgba(53, 10, 10, 0.801);
+    cursor: pointer;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+#menuContainer {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+
+}
