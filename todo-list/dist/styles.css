@@ -1,0 +1,121 @@
+header {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    color: lightgray;
+    height: 100px;
+    font-size: 50px;
+    line-height: 100px;
+    padding-inline: 20px;
+}
+
+#mainContainer {
+    display: flex;
+    flex-direction: row;
+    min-height: 800px;
+}
+
+#projectList {
+    width: 30%;
+    border-right: gray 4px solid;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#projectListContent {
+    margin-top: 20px;
+    margin-inline: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5px;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.projects, #addProjectButton {
+    border: lightgray 1px solid;
+    padding: 15px;
+}
+
+#addProjectButton {
+    font-size: 15px;
+    background: lightgray;
+    border: black 1px solid;
+}
+
+#deleteProjectButton {
+    font-size: 15px;
+    color: red;
+    margin-left: 50px;
+}
+
+.projects:hover, .tasks:hover, h4:hover, .priorities:hover, #addProjectButton:hover, #deleteProjectButton:hover, span:hover {
+    cursor: pointer;
+    color: rgb(17, 137, 184);
+}
+
+#tasksList {
+    width: 35%;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+#tasksListContent {
+    margin-top: 20px;
+    display: block;
+    font-size: 15px;
+    text-align: center;
+}
+
+.tasks {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    border: lightgray 1px solid;
+    padding: 15px;
+}
+
+#taskDetail {
+    width: 35%;
+    margin-inline: 5px;
+}
+
+#firstLine, #lastLine {
+    display: flex;
+    justify-content: space-between;
+}
+
+.descriptions {
+    border: black 1px solid;
+    min-height: 200px;
+}
+
+h4 {
+    color: red;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 15% auto;
+    border: 1px solid #888;
+    width: 30%;
+    background-color: rgba(6, 89, 105, 0.8);
+}
+
+#addProject, #addTask {
+    width: 20%;
+    height: 25%;
+    align-self: center;
+}
