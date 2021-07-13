@@ -114,7 +114,7 @@ const loadDOM = (() => {
         condition.textContent = `${description}`;
 
         const weatherIcon = document.createElement('img');
-        weatherIcon.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+        weatherIcon.src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
 
         changeBackground(description);
 
