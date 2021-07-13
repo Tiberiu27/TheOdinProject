@@ -108,7 +108,7 @@ const loadDOM = (() => {
         console.log(name);
 
         const temperature = document.createElement('h3');
-        temperature.textContent = isCelsius ? `${(currentTemp - 273.15).toFixed(1)} Celsius` : `${currentTemp.toFixed(1)} Fahrenheit`;
+        temperature.textContent = isCelsius ? `${(currentTemp - 273.15).toFixed(1)} Celsius` : `${(9/5*(currentTemp - 273) + 32).toFixed(1)} Fahrenheit`;
 
         const condition = document.createElement('h3');
         condition.textContent = `${description}`;
