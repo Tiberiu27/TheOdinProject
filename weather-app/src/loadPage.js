@@ -118,6 +118,7 @@ const loadDOM = (() => {
 
         changeBackground(description);
 
+
         contentCard.append(cityName, temperature, condition, weatherIcon);
         content.appendChild(contentCard);
         mainContainer.appendChild(content);
@@ -132,11 +133,11 @@ const loadDOM = (() => {
                 content.style.background = 'radial-gradient(circle, rgba(238,249,17,1) 0%, rgba(224,231,16,1) 35%, rgba(0,255,241,1) 100%)';
                 document.getElementById('buttonContainer').style.color = 'black';
                 return;
-            case 'scattered clouds': case 'few clouds': case 'overcast clouds':
+            case 'scattered clouds': case 'few clouds': case 'overcast clouds': case 'broken clouds':
                 content.style.background = 'radial-gradient(circle, rgba(233,244,16,1) 0%, rgba(90,91,76,1) 35%, rgba(6,44,129,1) 100%)';
                 document.getElementById('buttonContainer').style.color = 'white';
                 return;
-            case 'shower rain': case 'rain':
+            case 'shower rain': case 'rain': case 'thunderstorm':
                 content.style.background = 'radial-gradient(circle, rgba(102,107,5,1) 0%, rgba(76,90,91,1) 35%, rgba(6,44,129,1) 100%)';
                 document.getElementById('buttonContainer').style.color = 'white';
                 return;
