@@ -1,0 +1,50 @@
+body {
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+
+    background-color: tomato;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: row;
+
+    height: 800px;
+    background-color: wheat;
+}
+#left-container {
+    flex: 1;
+}
+
+#right-container {
+    flex: 1;
+}
+
+#right-container, #left-container {
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+#left-board, #right-board {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    gap: 2px;
+}
+
+.spaces {
+    width: 40px;
+    height: 40px;
+
+    background-color: white;
+}
+
