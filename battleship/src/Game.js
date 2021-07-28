@@ -26,9 +26,11 @@ const Game = (() => {
         if (player.hasTurn) {
             player.hasTurn = false;
             comp.hasTurn = true;
+            
             setTimeout(() => {
                 comp.attack();
             }, 1000);
+
         } else if (!player.hasTurn) {
             comp.hasTurn = false;
             player.hasTurn = true;
