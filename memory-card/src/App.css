@@ -1,0 +1,15 @@
+#mainContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    row-gap: 50px;
+    column-gap: 5%;
+    margin-top: 50px;
+    margin-right: 20%;
+    margin-left: 5%;
+}
+
+@media (max-width: 400px) {
+    #mainContainer {
+        grid-template-columns: repeat(3, 33%);
+    }
+}

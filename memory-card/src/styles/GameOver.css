@@ -1,0 +1,16 @@
+#game-over {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#game-over-title {
+    font-size: 100px;
+}
+
+#new-game {
+    background-color: transparent;
+    font-size: 40px;
+    border-radius: 25%;
+    padding: 20px;
+}
